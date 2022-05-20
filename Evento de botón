@@ -1,0 +1,66 @@
+/**
+ * Botón de inicio de sesión, cuando haga clic en él, verifique que el nombre de usuario y la contraseña ingresados ​​sean correctos. Cuando sea correcto, ingrese a la página principal; de lo contrario, aparecerá un mensaje emergente
+ */
+login = () => {
+    if (this.username == 'Admin' && this.password == '123') {
+        Alert.alert("Aterrizado con éxito");  // Aparece un cuadro de aviso
+    } else {
+        Alert.alert("Error al iniciar sesión","Nombre de usuario o contraseña incorrecta");  // Aparece un cuadro de aviso
+    }
+};
+
+/**
+   * Botón de registro, haga clic para ingresar a la interfaz de registro
+ */
+register = () => {
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+Botón "Iniciar sesión" para agregar el código después del evento
+
+<TouchableOpacity
+    onPress={this.login}  // Agregar evento de clic
+    style={styles.button}>
+    <Text
+        style={styles.btText}>iniciar sesión</Text>
+</TouchableOpacity>
+1
+2
+3
+4
+5
+6
+registerScene.js
+
+/**
+   * Botón de registro, juzgue si el registro es exitoso de acuerdo con el contenido de entrada
+ */
+register = () => {
+    if (this.username != '' && this.password != '') {
+        if (this.username != 'Admin') {
+            if (this.password === this.confirmPassword) {
+                Alert.alert("registración exitosa","Volver a iniciar sesión")
+            } else {
+                Alert.alert("registro fallido","La contraseña es diferente de confirmar la contraseña");
+            }
+        } else {
+            Alert.alert("registro fallido","Este nombre de usuario ya ha sido registrado");
+        }
+    } else {
+        Alert.alert("registro fallido","El nombre de usuario o la contraseña no pueden estar vacíos");
+    }
+};
