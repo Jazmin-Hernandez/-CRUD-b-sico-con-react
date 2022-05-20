@@ -1,0 +1,20 @@
+username = '';  // Guardar nombre de usuario
+password = '';  //Guardar contraseña
+
+/**
+   * Cuando cambie el valor del cuadro de entrada del nombre de usuario, guarde el valor modificado
+ * @param    {[type]} newUsername [input username]
+ */
+onUsernameChanged = (newUsername) => {
+    console.log(newUsername);// Después de ejecutar, puede ingresar contenido a voluntad en el cuadro de entrada y ver la verificación del registro.
+    this.username = newUsername;
+};
+
+/**
+   * Cuando cambie el valor del cuadro de entrada de contraseña, guarde el valor cambiado
+ * @param    {[type]} newUsername [Ingresó contraseña]
+ */
+onPasswordChanged = (newPassword) => {
+    console.log(newPassword);// Después de ejecutar, puede ingresar contenido a voluntad en el cuadro de entrada y ver la verificación del registro.
+    this.password = newPassword;
+};
